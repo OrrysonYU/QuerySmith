@@ -1,0 +1,88 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "querysmith"
+version = "0.1.0"
+description = "A controlled, self-healing SQL data analyst."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Proprietary" }
+authors = [{ name = "QuerySmith contributors" }]
+dependencies = [
+  "aiosqlite==0.21.0",
+  "alembic==1.16.5",
+  "argon2-cffi==25.1.0",
+  "asyncpg==0.30.0",
+  "fastapi==0.117.1",
+  "httpx==0.28.1",
+  "jinja2==3.1.6",
+  "langgraph==0.6.7",
+  "opentelemetry-api==1.37.0",
+  "opentelemetry-exporter-otlp-proto-http==1.37.0",
+  "opentelemetry-sdk==1.37.0",
+  "pandas==2.3.2",
+  "plotly==6.3.0",
+  "prometheus-client==0.23.1",
+  "psycopg[binary]==3.2.10",
+  "pydantic==2.11.9",
+  "pydantic-settings==2.10.1",
+  "sqlalchemy[asyncio]==2.0.43",
+  "sqlglot==27.20.0",
+  "streamlit==1.49.1",
+  "structlog==25.4.0",
+  "uvicorn==0.36.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy==1.18.2",
+  "pre-commit==4.3.0",
+  "pytest==8.4.2",
+  "pytest-asyncio==1.2.0",
+  "ruff==0.13.2",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/querysmith"]
+
+[tool.pytest.ini_options]
+addopts = ["--strict-config", "--strict-markers"]
+testpaths = ["tests"]
+filterwarnings = [
+  "ignore:The default value of `allowed_objects` will change:langchain_core._api.deprecation.LangChainPendingDeprecationWarning",
+]
+markers = [
+  "unit: fast, isolated unit tests",
+  "integration: tests requiring external services",
+  "e2e: end-to-end tests across application boundaries",
+  "llm: tests requiring a live language-model provider",
+  "security: security and adversarial test cases",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+python_version = "3.12"
+strict = true
+mypy_path = "src"
+packages = ["querysmith"]
+warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+module = ["asyncpg", "pandas", "plotly", "plotly.*"]
+ignore_missing_imports = true

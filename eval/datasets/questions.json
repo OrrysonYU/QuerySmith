@@ -1,0 +1,662 @@
+[
+  {
+    "id": "q001",
+    "question": "Show revenue by customer",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q002",
+    "question": "Show invoice count by artist",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q003",
+    "question": "Show track count by genre",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q004",
+    "question": "Show average invoice by month",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q005",
+    "question": "Show customer count by country",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q006",
+    "question": "Show revenue by album",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q007",
+    "question": "Show invoice count by customer",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q008",
+    "question": "Show track count by artist",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q009",
+    "question": "Show average invoice by genre",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q010",
+    "question": "Show customer count by month",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q011",
+    "question": "Show revenue by country",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q012",
+    "question": "Show invoice count by album",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q013",
+    "question": "Show track count by customer",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q014",
+    "question": "Show average invoice by artist",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q015",
+    "question": "Show customer count by genre",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q016",
+    "question": "Show revenue by month",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q017",
+    "question": "Show invoice count by country",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q018",
+    "question": "Show track count by album",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q019",
+    "question": "Show average invoice by customer",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q020",
+    "question": "Show customer count by artist",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q021",
+    "question": "Show revenue by genre",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q022",
+    "question": "Show invoice count by month",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q023",
+    "question": "Show track count by country",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q024",
+    "question": "Show average invoice by album",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q025",
+    "question": "Show customer count by customer",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q026",
+    "question": "Show revenue by artist",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q027",
+    "question": "Show invoice count by genre",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q028",
+    "question": "Show track count by month",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q029",
+    "question": "Show average invoice by country",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q030",
+    "question": "Show customer count by album",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q031",
+    "question": "Show revenue by customer",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q032",
+    "question": "Show invoice count by artist",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q033",
+    "question": "Show track count by genre",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q034",
+    "question": "Show average invoice by month",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q035",
+    "question": "Show customer count by country",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q036",
+    "question": "Show revenue by album",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q037",
+    "question": "Show invoice count by customer",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q038",
+    "question": "Show track count by artist",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q039",
+    "question": "Show average invoice by genre",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q040",
+    "question": "Show customer count by month",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q041",
+    "question": "Show revenue by country",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q042",
+    "question": "Show invoice count by album",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q043",
+    "question": "Show track count by customer",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q044",
+    "question": "Show average invoice by artist",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q045",
+    "question": "Show customer count by genre",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q046",
+    "question": "Show revenue by month",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q047",
+    "question": "Show invoice count by country",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q048",
+    "question": "Show track count by album",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q049",
+    "question": "Show average invoice by customer",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q050",
+    "question": "Show customer count by artist",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q051",
+    "question": "Show revenue by genre",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q052",
+    "question": "Show invoice count by month",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q053",
+    "question": "Show track count by country",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q054",
+    "question": "Show average invoice by album",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q055",
+    "question": "Show customer count by customer",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q056",
+    "question": "Show revenue by artist",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q057",
+    "question": "Show invoice count by genre",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q058",
+    "question": "Show track count by month",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q059",
+    "question": "Show average invoice by country",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  },
+  {
+    "id": "q060",
+    "question": "Show customer count by album",
+    "expected_shape": {
+      "min_columns": 2
+    },
+    "forbidden_constructs": [
+      "write",
+      "system_catalog"
+    ]
+  }
+]

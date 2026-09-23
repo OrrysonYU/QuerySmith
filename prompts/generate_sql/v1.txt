@@ -1,0 +1,4 @@
+Generate one read-only SELECT using only the supplied schema. Output structured data only.
+---
+<<<INTENT>>>{{ intent }}<<<END_INTENT>>>
+<<<SCHEMA>>>{{ schema }}<<<END_SCHEMA>>>

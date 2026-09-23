@@ -1,0 +1,47 @@
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -e ".[dev]"
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: mypy src/
+      - run: pytest -m "not integration and not e2e and not llm"
+      - run: alembic upgrade head --sql > /tmp/migration.sql
+      - run: test -s /tmp/migration.sql
+  postgres-integration:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env: {POSTGRES_DB: querysmith_test, POSTGRES_USER: querysmith, POSTGRES_PASSWORD: test-only}
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U querysmith" --health-interval 5s
+          --health-timeout 3s --health-retries 10
+    env:
+      QS_TEST_POSTGRES_URL: postgresql://querysmith:test-only@localhost:5432/querysmith_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -e ".[dev]"
+      - run: sed -i 's|postgresql+asyncpg://querysmith:dev-only@localhost/querysmith|postgresql+psycopg://querysmith:test-only@localhost:5432/querysmith_test|' alembic.ini
+      - run: alembic upgrade head
+      - run: alembic downgrade base
+      - run: alembic upgrade head
+      - run: pytest -m integration
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v6
+        with: {context: ., file: infra/docker/Dockerfile, push: false}

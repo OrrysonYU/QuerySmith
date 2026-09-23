@@ -1,0 +1,18 @@
+services:
+  api:
+    restart: unless-stopped
+    read_only: true
+    tmpfs: [/tmp, /app/_charts]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    environment:
+      QS_CORE__ENVIRONMENT: production
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health')"]
+      interval: 15s
+      timeout: 3s
+      retries: 5
+  postgres-app:
+    restart: unless-stopped
+  postgres-chinook:
+    restart: unless-stopped

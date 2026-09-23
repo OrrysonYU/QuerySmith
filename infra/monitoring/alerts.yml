@@ -1,0 +1,21 @@
+groups:
+  - name: querysmith
+    rules:
+      - alert: QuerySmithHighErrorRate
+        expr: sum(rate(qs_requests_total{status=~"5.."}[5m])) / clamp_min(sum(rate(qs_requests_total[5m])), 1) > 0.05
+        for: 10m
+        labels: {severity: warning}
+      - alert: QuerySmithPolicyRejectionSpike
+        expr: sum(rate(qs_policy_rejections_total[5m])) > 1
+        for: 5m
+        labels: {severity: warning}
+      - alert: QuerySmithDeadlinesExceeded
+        expr: increase(qs_deadline_exceeded_total[10m]) > 5
+        labels: {severity: warning}
+      - alert: QuerySmithQueueBacklog
+        expr: qs_job_queue_depth > 20
+        for: 10m
+        labels: {severity: warning}
+      - alert: QuerySmithAuditFailures
+        expr: increase(qs_audit_write_failures_total[5m]) > 0
+        labels: {severity: critical}

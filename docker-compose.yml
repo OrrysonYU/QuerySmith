@@ -1,0 +1,37 @@
+services:
+  postgres-app:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: querysmith
+      POSTGRES_USER: querysmith
+      POSTGRES_PASSWORD: dev-only
+    ports:
+      - "127.0.0.1:5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U querysmith -d querysmith"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - app-db:/var/lib/postgresql/data
+
+  postgres-chinook:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: chinook
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: dev-only
+    ports:
+      - "127.0.0.1:5434:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d chinook"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - chinook-db:/var/lib/postgresql/data
+      - ./infra/docker/chinook:/docker-entrypoint-initdb.d:ro
+
+volumes:
+  app-db:
+  chinook-db:

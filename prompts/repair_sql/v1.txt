@@ -1,0 +1,4 @@
+Repair SQL without changing the original intent. Security rejections are never repairable.
+---
+<<<INTENT>>>{{ intent }}<<<END_INTENT>>>
+<<<ATTEMPTS>>>{{ attempts }}<<<END_ATTEMPTS>>>

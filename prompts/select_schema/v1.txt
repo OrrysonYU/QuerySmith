@@ -1,0 +1,4 @@
+Select only from the already-authorized schema candidates.
+---
+<<<INTENT>>>{{ intent }}<<<END_INTENT>>>
+<<<CANDIDATES>>>{{ candidates }}<<<END_CANDIDATES>>>

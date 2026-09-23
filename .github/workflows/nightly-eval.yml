@@ -1,0 +1,28 @@
+name: Nightly evaluation
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
+permissions:
+  contents: read
+jobs:
+  eval:
+    if: ${{ secrets.QS_EVAL_API_KEY != '' }}
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env: {POSTGRES_DB: querysmith, POSTGRES_USER: querysmith, POSTGRES_PASSWORD: test-only}
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U querysmith" --health-interval 5s
+          --health-timeout 3s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -e ".[dev]"
+      - run: pytest -m "e2e and llm"
+        env:
+          QS_E2E_API_KEY: ${{ secrets.QS_EVAL_API_KEY }}
+          QS_E2E_BASE_URL: ${{ secrets.QS_EVAL_BASE_URL }}

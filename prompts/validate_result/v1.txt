@@ -1,0 +1,5 @@
+Act adversarially. Identify any way the SQL and result fail to answer the intent.
+---
+<<<INTENT>>>{{ intent }}<<<END_INTENT>>>
+<<<SQL>>>{{ sql }}<<<END_SQL>>>
+<<<ROWS>>>{{ rows }}<<<END_ROWS>>>

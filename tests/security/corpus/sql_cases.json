@@ -1,0 +1,242 @@
+[
+  {
+    "id": "multi-0",
+    "sql": "SELECT customer.id FROM customer LIMIT 1; DELETE FROM customer"
+  },
+  {
+    "id": "multi-1",
+    "sql": "SELECT customer.id FROM customer LIMIT 2; DELETE FROM customer"
+  },
+  {
+    "id": "multi-2",
+    "sql": "SELECT customer.id FROM customer LIMIT 3; DELETE FROM customer"
+  },
+  {
+    "id": "multi-3",
+    "sql": "SELECT customer.id FROM customer LIMIT 4; DELETE FROM customer"
+  },
+  {
+    "id": "multi-4",
+    "sql": "SELECT customer.id FROM customer LIMIT 5; DELETE FROM customer"
+  },
+  {
+    "id": "multi-5",
+    "sql": "SELECT customer.id FROM customer LIMIT 6; DELETE FROM customer"
+  },
+  {
+    "id": "multi-6",
+    "sql": "SELECT customer.id FROM customer LIMIT 7; DELETE FROM customer"
+  },
+  {
+    "id": "multi-7",
+    "sql": "SELECT customer.id FROM customer LIMIT 8; DELETE FROM customer"
+  },
+  {
+    "id": "multi-8",
+    "sql": "SELECT customer.id FROM customer LIMIT 9; DELETE FROM customer"
+  },
+  {
+    "id": "multi-9",
+    "sql": "SELECT customer.id FROM customer LIMIT 10; DELETE FROM customer"
+  },
+  {
+    "id": "write-0",
+    "sql": "UPDATE customer SET id=1"
+  },
+  {
+    "id": "write-1",
+    "sql": "DELETE FROM customer"
+  },
+  {
+    "id": "write-2",
+    "sql": "INSERT INTO customer(id) VALUES (1)"
+  },
+  {
+    "id": "write-3",
+    "sql": "DROP TABLE customer"
+  },
+  {
+    "id": "write-4",
+    "sql": "ALTER TABLE customer ADD x int"
+  },
+  {
+    "id": "write-5",
+    "sql": "CREATE TABLE x(id int)"
+  },
+  {
+    "id": "write-6",
+    "sql": "TRUNCATE customer"
+  },
+  {
+    "id": "write-7",
+    "sql": "GRANT SELECT ON customer TO public"
+  },
+  {
+    "id": "write-8",
+    "sql": "REVOKE SELECT ON customer FROM public"
+  },
+  {
+    "id": "write-9",
+    "sql": "SET search_path=public"
+  },
+  {
+    "id": "write-10",
+    "sql": "BEGIN"
+  },
+  {
+    "id": "write-11",
+    "sql": "COMMIT"
+  },
+  {
+    "id": "write-12",
+    "sql": "VACUUM customer"
+  },
+  {
+    "id": "write-13",
+    "sql": "CALL danger()"
+  },
+  {
+    "id": "write-14",
+    "sql": "DO $$ BEGIN NULL; END $$"
+  },
+  {
+    "id": "table-0",
+    "sql": "SELECT s.value FROM secret_0 AS s"
+  },
+  {
+    "id": "table-1",
+    "sql": "SELECT s.value FROM secret_1 AS s"
+  },
+  {
+    "id": "table-2",
+    "sql": "SELECT s.value FROM secret_2 AS s"
+  },
+  {
+    "id": "table-3",
+    "sql": "SELECT s.value FROM secret_3 AS s"
+  },
+  {
+    "id": "table-4",
+    "sql": "SELECT s.value FROM secret_4 AS s"
+  },
+  {
+    "id": "table-5",
+    "sql": "SELECT s.value FROM secret_5 AS s"
+  },
+  {
+    "id": "table-6",
+    "sql": "SELECT s.value FROM secret_6 AS s"
+  },
+  {
+    "id": "table-7",
+    "sql": "SELECT s.value FROM secret_7 AS s"
+  },
+  {
+    "id": "table-8",
+    "sql": "SELECT s.value FROM secret_8 AS s"
+  },
+  {
+    "id": "table-9",
+    "sql": "SELECT s.value FROM secret_9 AS s"
+  },
+  {
+    "id": "function-0",
+    "sql": "SELECT pg_sleep('x') FROM customer"
+  },
+  {
+    "id": "function-1",
+    "sql": "SELECT pg_read_file('x') FROM customer"
+  },
+  {
+    "id": "function-2",
+    "sql": "SELECT pg_ls_dir('x') FROM customer"
+  },
+  {
+    "id": "function-3",
+    "sql": "SELECT set_config('x') FROM customer"
+  },
+  {
+    "id": "function-4",
+    "sql": "SELECT current_setting('x') FROM customer"
+  },
+  {
+    "id": "function-5",
+    "sql": "SELECT dblink('x') FROM customer"
+  },
+  {
+    "id": "function-6",
+    "sql": "SELECT lo_import('x') FROM customer"
+  },
+  {
+    "id": "function-7",
+    "sql": "SELECT lo_export('x') FROM customer"
+  },
+  {
+    "id": "function-8",
+    "sql": "SELECT query_to_xml('x') FROM customer"
+  },
+  {
+    "id": "function-9",
+    "sql": "SELECT version('x') FROM customer"
+  },
+  {
+    "id": "star-0",
+    "sql": "SELECT * FROM customer"
+  },
+  {
+    "id": "star-1",
+    "sql": "SELECT customer.* FROM customer"
+  },
+  {
+    "id": "star-2",
+    "sql": "SELECT customer.* FROM customer"
+  },
+  {
+    "id": "star-3",
+    "sql": "SELECT customer.* FROM customer"
+  },
+  {
+    "id": "star-4",
+    "sql": "SELECT customer.* FROM customer"
+  },
+  {
+    "id": "catalog-0",
+    "sql": "SELECT x.oid FROM pg_catalog.pg_user AS x"
+  },
+  {
+    "id": "catalog-1",
+    "sql": "SELECT x.oid FROM pg_catalog.pg_roles AS x"
+  },
+  {
+    "id": "catalog-2",
+    "sql": "SELECT x.oid FROM information_schema.tables AS x"
+  },
+  {
+    "id": "catalog-3",
+    "sql": "SELECT x.oid FROM pg_catalog.pg_class AS x"
+  },
+  {
+    "id": "catalog-4",
+    "sql": "SELECT x.oid FROM information_schema.columns AS x"
+  },
+  {
+    "id": "special-0",
+    "sql": "SELECT customer.id INTO stolen FROM customer"
+  },
+  {
+    "id": "special-1",
+    "sql": "SELECT customer.id FROM customer FOR UPDATE"
+  },
+  {
+    "id": "special-2",
+    "sql": "WITH x AS (DELETE FROM customer RETURNING id) SELECT x.id FROM x"
+  },
+  {
+    "id": "special-3",
+    "sql": "SELECT customer.id FROM customer UNION SELECT secret.id FROM secret"
+  },
+  {
+    "id": "special-4",
+    "sql": "COPY customer TO STDOUT"
+  }
+]

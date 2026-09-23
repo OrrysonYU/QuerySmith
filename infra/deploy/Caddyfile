@@ -1,0 +1,14 @@
+:8080 {
+  encode gzip
+  header {
+    X-Content-Type-Options nosniff
+    X-Frame-Options DENY
+    Referrer-Policy no-referrer
+  }
+  handle_path /ui/* {
+    reverse_proxy ui:8501
+  }
+  handle {
+    reverse_proxy api:8000
+  }
+}
