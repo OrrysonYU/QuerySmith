@@ -1,13 +1,10 @@
 """API-only Streamlit console for QuerySmith."""
 
 from __future__ import annotations
-
 import os
 import time
 from typing import Any
-
 import streamlit as st
-
 from client import QuerySmithClient
 
 
@@ -185,7 +182,7 @@ try:
         question = st.chat_input("Ask a question about your data")
 
         if question:
-            with st.spinner("Submitting question..."):
+            with st.spinner("Submitting your question..."):
                 created = client.ask(question)
 
             st.session_state.active_query_id = created["query_id"]
